@@ -57,4 +57,7 @@
       port: 3000,
       open: true,
     },
+    define: {
+      'process.env': process.env,
+    },
   });
