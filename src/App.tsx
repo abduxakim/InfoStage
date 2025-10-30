@@ -1,3 +1,5 @@
+//TODO вынести роуты в отдельный файл пример src/routes/index.tsx
+
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from './components/ui/sonner';
 import Layout from './components/Layout';

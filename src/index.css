@@ -1,3 +1,10 @@
+/*TODO: Optimize index.css
+- [ ] Проверить, не является ли index.css автогенерируемым (Figma/Tailwind)
+- [ ] Удалить неиспользуемые классы / объединить дублирующиеся стили
+- [ ] Вынести кастомные стили в src/styles/custom.css
+- [ ] Настроить Tailwind purge для очистки ненужного CSS
+- [ ] Добавить комментарий в начале файла: “Auto-generated — do not edit manually*/
+
 /*! tailwindcss v4.1.3 | MIT License | https://tailwindcss.com */
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
@@ -256,7 +263,7 @@
   }
 
   img, svg, video, canvas, audio, iframe, embed, object {
-    vertical-align: middle;
+    /*vertical-align: middle;*/
     display: block;
   }
 
@@ -674,6 +681,7 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     display: -webkit-box;
+    line-clamp: 3; /* ← стандартное свойство */
     overflow: hidden;
   }
 
@@ -681,6 +689,7 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     display: -webkit-box;
+    line-clamp: 3; /* ← стандартное свойство */
     overflow: hidden;
   }
 
@@ -2491,6 +2500,7 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     display: -webkit-box;
+    line-clamp: 3; /* ← стандартное свойство */
     overflow: hidden;
   }
 
