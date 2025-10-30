@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 import { mockEvents, mockComments } from '../data/mockData';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 export default function EventDetailsPage() {
   const { eventId } = useParams();

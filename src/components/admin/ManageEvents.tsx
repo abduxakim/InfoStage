@@ -17,7 +17,8 @@ import {
 } from '../ui/table';
 import { Search, Plus, Edit, Trash2, Eye } from 'lucide-react';
 import { mockEvents, categories } from '../../data/mockData';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
+
 
 export default function ManageEvents() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -232,8 +233,9 @@ export default function ManageEvents() {
               <div className="space-y-2">
                 <Label htmlFor="category">Category</Label>
                 <Select
-                  value={formData.category}
-                  onValueChange={(value) => setFormData({ ...formData, category: value, subcategory: '' })}
+                  onValueChange={(value: string) =>
+                  setFormData({ ...formData, category: value, subcategory: '' })
+}
                 >
                   <SelectTrigger>
                     <SelectValue placeholder="Select category" />
@@ -251,8 +253,8 @@ export default function ManageEvents() {
               <div className="space-y-2">
                 <Label htmlFor="subcategory">Subcategory</Label>
                 <Select
-                  value={formData.subcategory}
-                  onValueChange={(value) => setFormData({ ...formData, subcategory: value })}
+                 onValueChange={(value: string) =>
+                  setFormData({ ...formData, subcategory: value })}
                   disabled={!selectedCategory}
                 >
                   <SelectTrigger>
@@ -325,8 +327,8 @@ export default function ManageEvents() {
               <div className="space-y-2">
                 <Label htmlFor="ticketSite">Ticket Site</Label>
                 <Select
-                  value={formData.ticketSite}
-                  onValueChange={(value) => setFormData({ ...formData, ticketSite: value })}
+                 onValueChange={(value: string) =>
+                  setFormData({ ...formData, ticketSite: value })}
                 >
                   <SelectTrigger>
                     <SelectValue />

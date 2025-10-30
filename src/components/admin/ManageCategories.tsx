@@ -7,7 +7,8 @@ import { Label } from '../ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 import { Plus, Edit, Trash2, ChevronRight, ChevronDown } from 'lucide-react';
 import { categories } from '../../data/mockData';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
+
 
 export default function ManageCategories() {
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
@@ -192,7 +193,9 @@ export default function ManageCategories() {
                 <Label htmlFor="icon">Icon</Label>
                 <Select
                   value={formData.icon}
-                  onValueChange={(value) => setFormData({ ...formData, icon: value })}
+                  onValueChange={(value: string) =>
+                    setFormData({ ...formData, icon: value })
+                  }
                 >
                   <SelectTrigger>
                     <SelectValue />

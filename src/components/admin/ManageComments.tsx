@@ -14,7 +14,8 @@ import {
 } from '../ui/table';
 import { Search, Check, X, Flag, Eye } from 'lucide-react';
 import { mockComments, mockEvents } from '../../data/mockData';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
+
 
 export default function ManageComments() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -22,7 +23,7 @@ export default function ManageComments() {
 
   const allComments = mockComments.map((comment) => ({
     ...comment,
-    eventTitle: mockEvents.find((e) => e.eventId === comment.eventId)?.title || 'Unknown Event',
+   eventTitle: mockEvents.find((e) => e.id === comment.eventId)?.title || 'Unknown Event',
   }));
 
   const filteredComments = allComments.filter((comment) => {

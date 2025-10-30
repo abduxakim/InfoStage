@@ -1,4 +1,3 @@
-
   import { defineConfig } from 'vite';
   import react from '@vitejs/plugin-react-swc';
   import path from 'path';
@@ -57,6 +56,7 @@
       port: 3000,
       open: true,
     },
+    // TODO: Remove this workaround once the issue is resolved in the dependencies
     define: {
       'process.env': process.env,
     },

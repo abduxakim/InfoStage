@@ -7,7 +7,8 @@ import { Textarea } from '../ui/textarea';
 import { Switch } from '../ui/switch';
 import { Separator } from '../ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
+
 
 export default function AdminSettings() {
   const [settings, setSettings] = useState({
@@ -87,7 +88,8 @@ export default function AdminSettings() {
                 </div>
                 <Switch
                   checked={settings.maintenanceMode}
-                  onCheckedChange={(checked) => setSettings({ ...settings, maintenanceMode: checked })}
+                  onCheckedChange={(checked: boolean) =>
+                    setSettings({ ...settings, maintenanceMode: checked })}
                 />
               </div>
 
@@ -153,10 +155,9 @@ export default function AdminSettings() {
                       </p>
                     </div>
                     <Switch
-                      checked={settings.enableComments}
-                      onCheckedChange={(checked) =>
-                        setSettings({ ...settings, enableComments: checked })
-                      }
+                    onCheckedChange={(checked: boolean) =>
+                      setSettings({ ...settings, enableComments: checked })}
+
                     />
                   </div>
 
@@ -170,10 +171,9 @@ export default function AdminSettings() {
                       </p>
                     </div>
                     <Switch
-                      checked={settings.requireCommentApproval}
-                      onCheckedChange={(checked) =>
-                        setSettings({ ...settings, requireCommentApproval: checked })
-                      }
+                     onCheckedChange={(checked: boolean) =>
+                      setSettings({ ...settings, enableComments: checked })}
+
                       disabled={!settings.enableComments}
                     />
                   </div>
@@ -188,10 +188,9 @@ export default function AdminSettings() {
                       </p>
                     </div>
                     <Switch
-                      checked={settings.enableFavorites}
-                      onCheckedChange={(checked) =>
-                        setSettings({ ...settings, enableFavorites: checked })
-                      }
+                     onCheckedChange={(checked: boolean) =>
+                        setSettings({ ...settings, enableComments: checked })}
+
                     />
                   </div>
                 </div>
